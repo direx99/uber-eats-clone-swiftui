@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var searchText = ""
     var body: some View {
         VStack{
             HStack{
@@ -21,7 +22,7 @@ struct HomeView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 10, height: 10)
-                            
+                        
                     }
                     .padding(.top,-10)
                 }
@@ -33,6 +34,31 @@ struct HomeView: View {
                     }
                 }
             }
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .foregroundColor(.black)
+              
+                TextField("Food , groceries , drinks , etc.", text: $searchText)
+                    .foregroundColor(Color("TextGray"))
+                    .padding(8)
+                    
+                
+               
+                Divider()
+                    .frame(height: 25)
+                Button(action: {
+                   
+                }) {
+                   
+                    Image(systemName: "slider.horizontal.3")
+                        .foregroundColor(.black)
+                }
+            }
+            .padding(.horizontal)
+            .background(Color("SearchColor"))
+            .frame(width: .infinity)
+            .cornerRadius(50)
+         
             Spacer()
         }
     }
@@ -43,3 +69,4 @@ struct HomeView_Previews: PreviewProvider {
         HomeView()
     }
 }
+
