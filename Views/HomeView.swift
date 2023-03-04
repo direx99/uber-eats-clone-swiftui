@@ -62,6 +62,7 @@ struct HomeView: View {
             .frame(width: .infinity)
             .cornerRadius(50)
             ShopCategory()
+            ShopCategdory()
             Spacer()
         }
     }
@@ -78,103 +79,186 @@ struct HomeView_Previews: PreviewProvider {
 struct ShopCategory : View{
     
     var body: some View{
-        GeometryReader { geometry in
-            HStack(alignment: .center ,spacing: 0) {
-                // First frame
-                ZStack(alignment: .topLeading){
-                    Rectangle()
-                        .fill(Color("LayoutGray"))
-                    ZStack{
-                        
-                        
-                        VStack{
-                            Text("Promo")
-                                .font(.caption)
-                                .padding(.vertical ,3)
-                                .padding(.horizontal ,10)
-                                .foregroundColor(Color("LayoutGray"))
-                                .background(Color("PromoGreen"))
-                                .cornerRadius(30)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            
-                            
-                            Spacer()
-                            
-                            
-                            Text("Resturants")
-                                .font(.title3)
-                            
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            
-                            
-                            
-                            
-                        }
-                        .padding(.horizontal,10)
-                        .padding(.vertical ,10)
-                        Image("Resturant")
-                            .resizable()
-                            .scaledToFit()
-                            .padding(.vertical,15)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                    }
-                    
-                }
-              
-                .cornerRadius(10)
-                
-                .padding(.trailing,5)
-                .frame(width: geometry.size.width / 2, height: 100)
-            
-            
         
-                // Second frame
-                ZStack(alignment: .topLeading){
-                    Rectangle()
-                        .fill(Color("LayoutGray"))
-                    ZStack{
-                        
-                        
-                        VStack{
-                            Text("Promo")
-                                .font(.caption)
-                                .padding(.vertical ,3)
-                                .padding(.horizontal ,10)
-                                .foregroundColor(Color("LayoutGray"))
-                                .background(Color("PromoGreen"))
-                                .cornerRadius(30)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            
-                            
-                            Spacer()
-                            
-                            
-                            Text("Grocery")
-                                .font(.title3)
-                               
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            
-                            
-                            
-                            
-                        }
-                        .padding(.horizontal,10)
-                        .padding(.vertical ,10)
-                        Image("Grocery")
-                            .resizable()
-                            .scaledToFit()
-                            .padding(.vertical,15)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                    }
+        HStack(alignment: .center ,spacing: 0) {
+            // First frame
+            ZStack(alignment: .topLeading){
+                Rectangle()
+                    .fill(Color("LayoutGray"))
+                ZStack{
                     
+                    
+                    VStack{
+                        Text("Promo")
+                            .font(.caption)
+                            .padding(.vertical ,3)
+                            .padding(.horizontal ,10)
+                            .foregroundColor(Color("LayoutGray"))
+                            .background(Color("PromoGreen"))
+                            .cornerRadius(30)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        
+                        Spacer()
+                        
+                        
+                        Text("Resturants")
+                            .font(.title3)
+                        
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        
+                        
+                        
+                    }
+                    .padding(.horizontal,10)
+                    .padding(.vertical ,10)
+                    Image("Resturant")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(.vertical,15)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
                 }
-                .cornerRadius(10)
                 
-                .padding(.leading,5)
-                .frame(width: geometry.size.width / 2, height: 100)
             }
-            .padding(.top,15)
+            
+            .cornerRadius(10)
+            
+            .padding(.trailing,5)
+            // .frame(width: geometry.size.width / 2, height: 100)
+            
+            
+            
+            // Second frame
+            ZStack(alignment: .topLeading){
+                Rectangle()
+                    .fill(Color("LayoutGray"))
+                ZStack{
+                    
+                    
+                    VStack{
+                        Text("Promo")
+                            .font(.caption)
+                            .padding(.vertical ,3)
+                            .padding(.horizontal ,10)
+                            .foregroundColor(Color("LayoutGray"))
+                            .background(Color("PromoGreen"))
+                            .cornerRadius(30)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        
+                        Spacer()
+                        
+                        
+                        Text("Grocery")
+                            .font(.title3)
+                        
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        
+                        
+                        
+                    }
+                    .padding(.horizontal,10)
+                    .padding(.vertical ,10)
+                    Image("Grocery")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(.vertical,15)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                }
+                
+            }
+            .cornerRadius(10)
+            
+            .padding(.leading,5)
+            // .frame(width: geometry.size.width / 2, height: 100)
         }
+        .frame(maxHeight: 110)
+        .padding(.top,15)
         
     }
+    
+    
+    
 }
+struct ShopCategdory : View{
+    
+    
+    
+    
+    var body: some View{
+        
+        HStack (){
+            // First frame
+            
+            
+            
+            
+            
+            VStack{
+                Image("Convienience")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.vertical,15)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .background(Color("LayoutGray"))
+                    .cornerRadius(10)
+                    .frame(maxHeight: 90)
+                Text("More")
+                    .font(.caption)
+                
+            }
+            VStack{
+                Image("Grocery")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.vertical,15)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .background(Color("LayoutGray"))
+                    .cornerRadius(10)
+                    .frame(maxHeight: 90)
+                Text("More")
+                    .font(.caption)
+                
+            }
+            
+            VStack{
+                Image("Grocery")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.vertical,15)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .background(Color("LayoutGray"))
+                    .cornerRadius(10)
+                    .frame(maxHeight: 90)
+                Text("More")
+                    .font(.caption)
+                
+            }
+            VStack{
+                Image("Grocery")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.vertical,15)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .background(Color("LayoutGray"))
+                    .cornerRadius(10)
+                    .frame(maxHeight: 90)
+                
+                Text("More")
+                    .font(.caption)
+                
+            }
+            
+        }
+        
+        
+        
+        
+    }
+    
+    
+}
+
+
