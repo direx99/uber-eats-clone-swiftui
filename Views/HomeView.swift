@@ -14,6 +14,7 @@ struct HomeView: View {
             HStack{
                 VStack(alignment: .leading){
                     Text("Deliver now")
+                    
                         .foregroundColor(Color("TextGray"))
                     HStack{
                         Text("81 , Wadduwa ")
@@ -41,7 +42,7 @@ struct HomeView: View {
                 
                 TextField("Food , groceries , drinks , etc.", text: $searchText)
                     .foregroundColor(Color.gray)
-                    .padding(8)
+                    .padding(10)
                 
                 
                 
@@ -111,7 +112,7 @@ struct ShopCategory : View{
                         }
                         .padding(.horizontal,10)
                         .padding(.vertical ,10)
-                        Image("Grocery")
+                        Image("Resturant")
                             .resizable()
                             .scaledToFit()
                             .padding(.vertical,15)
@@ -119,6 +120,7 @@ struct ShopCategory : View{
                     }
                     
                 }
+              
                 .cornerRadius(10)
                 
                 .padding(.trailing,5)
@@ -147,7 +149,7 @@ struct ShopCategory : View{
                             Spacer()
                             
                             
-                            Text("Resturants")
+                            Text("Grocery")
                                 .font(.title3)
                                
                                 .frame(maxWidth: .infinity, alignment: .leading)
