@@ -18,6 +18,7 @@ struct HomeView: View {
                     HStack{
                         Text("81 , Wadduwa ")
                             .font(.headline)
+                        
                         Image(systemName: "chevron.down")
                             .resizable()
                             .scaledToFit()
@@ -37,19 +38,20 @@ struct HomeView: View {
             HStack {
                 Image(systemName: "magnifyingglass")
                     .foregroundColor(.black)
-              
-                TextField("Food , groceries , drinks , etc.", text: $searchText)
-                    .foregroundColor(Color("TextGray"))
-                    .padding(8)
-                    
                 
-               
+                TextField("Food , groceries , drinks , etc.", text: $searchText)
+                    .foregroundColor(Color.gray)
+                    .padding(8)
+                
+                
+                
+                
                 Divider()
                     .frame(height: 25)
                 Button(action: {
-                   
+                    
                 }) {
-                   
+                    
                     Image(systemName: "slider.horizontal.3")
                         .foregroundColor(.black)
                 }
@@ -58,7 +60,7 @@ struct HomeView: View {
             .background(Color("SearchColor"))
             .frame(width: .infinity)
             .cornerRadius(50)
-         
+            ShopCategory()
             Spacer()
         }
     }
@@ -70,3 +72,107 @@ struct HomeView_Previews: PreviewProvider {
     }
 }
 
+
+
+struct ShopCategory : View{
+    
+    var body: some View{
+        GeometryReader { geometry in
+            HStack(alignment: .center ,spacing: 0) {
+                // First frame
+                ZStack(alignment: .topLeading){
+                    Rectangle()
+                        .fill(Color("LayoutGray"))
+                    ZStack{
+                        
+                        
+                        VStack{
+                            Text("Promo")
+                                .font(.caption)
+                                .padding(.vertical ,3)
+                                .padding(.horizontal ,10)
+                                .foregroundColor(Color("LayoutGray"))
+                                .background(Color("PromoGreen"))
+                                .cornerRadius(30)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            
+                            
+                            Spacer()
+                            
+                            
+                            Text("Resturants")
+                                .font(.title3)
+                            
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            
+                            
+                            
+                            
+                        }
+                        .padding(.horizontal,10)
+                        .padding(.vertical ,10)
+                        Image("Grocery")
+                            .resizable()
+                            .scaledToFit()
+                            .padding(.vertical,15)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                    }
+                    
+                }
+                .cornerRadius(10)
+                
+                .padding(.trailing,5)
+                .frame(width: geometry.size.width / 2, height: 100)
+            
+            
+        
+                // Second frame
+                ZStack(alignment: .topLeading){
+                    Rectangle()
+                        .fill(Color("LayoutGray"))
+                    ZStack{
+                        
+                        
+                        VStack{
+                            Text("Promo")
+                                .font(.caption)
+                                .padding(.vertical ,3)
+                                .padding(.horizontal ,10)
+                                .foregroundColor(Color("LayoutGray"))
+                                .background(Color("PromoGreen"))
+                                .cornerRadius(30)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            
+                            
+                            Spacer()
+                            
+                            
+                            Text("Resturants")
+                                .font(.title3)
+                               
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            
+                            
+                            
+                            
+                        }
+                        .padding(.horizontal,10)
+                        .padding(.vertical ,10)
+                        Image("Grocery")
+                            .resizable()
+                            .scaledToFit()
+                            .padding(.vertical,15)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                    }
+                    
+                }
+                .cornerRadius(10)
+                
+                .padding(.leading,5)
+                .frame(width: geometry.size.width / 2, height: 100)
+            }
+            .padding(.top,15)
+        }
+        
+    }
+}
