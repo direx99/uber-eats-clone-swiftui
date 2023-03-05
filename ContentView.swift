@@ -8,11 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedTab = 0
+    
     var body: some View {
-        VStack {
+        
+        TabView(selection: $selectedTab) {
             HomeView()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                        
+                    Text("Home")
+                }
+                .tag(0)
+            BottomNavBarView()
+                .tabItem {
+                    Image(systemName: "magnifyingglass.circle")
+                       
+                    Text("Home")
+                }
+                .tag(1)
+            BottomNavBarView()
+                .tabItem {
+                    Image(systemName: "person")
+                       
+                    Text("Home")
+                }
+                .tag(1)
+            BottomNavBarView()
+                .tabItem {
+                    Image(systemName: "person")
+                       
+                    Text("Home")
+                }
+                .tag(1)
+           
         }
-      
+        .accentColor(.black)
+        
+        
+        
+        
     }
 }
 
