@@ -36,6 +36,10 @@ struct HomeView: View {
                     }
                 }
             }
+            .padding(.vertical , 10)
+            .padding(.horizontal , 20)
+
+
             HStack {
                 Image(systemName: "magnifyingglass")
                     .foregroundColor(.black)
@@ -61,8 +65,15 @@ struct HomeView: View {
             .background(Color("SearchColor"))
             .frame(width: .infinity)
             .cornerRadius(50)
+            .padding(.vertical , 10)
+            .padding(.horizontal , 15)
             ShopCategory()
-            ShopCategdory()
+            SubCategory()
+            Rectangle()
+                .frame(height: 10)
+                .foregroundColor(Color("LayoutGray"))
+
+
             Spacer()
         }
     }
@@ -103,8 +114,7 @@ struct ShopCategory : View{
                         
                         
                         Text("Resturants")
-                            .font(.title3)
-                        
+                            .font(.body)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
                         
@@ -116,7 +126,9 @@ struct ShopCategory : View{
                     Image("Resturant")
                         .resizable()
                         .scaledToFit()
-                        .padding(.vertical,15)
+                        .padding(15)
+                        .padding(.trailing,-5)
+                        .padding(.top,5)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
                 
@@ -127,7 +139,8 @@ struct ShopCategory : View{
             .padding(.trailing,5)
             // .frame(width: geometry.size.width / 2, height: 100)
             
-            
+         
+
             
             // Second frame
             ZStack(alignment: .topLeading){
@@ -151,8 +164,7 @@ struct ShopCategory : View{
                         
                         
                         Text("Grocery")
-                            .font(.title3)
-                        
+                            .font(.body)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
                         
@@ -164,7 +176,7 @@ struct ShopCategory : View{
                     Image("Grocery")
                         .resizable()
                         .scaledToFit()
-                        .padding(.vertical,15)
+                        .padding(20)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
                 
@@ -174,15 +186,14 @@ struct ShopCategory : View{
             .padding(.leading,5)
             // .frame(width: geometry.size.width / 2, height: 100)
         }
-        .frame(maxHeight: 110)
-        .padding(.top,15)
-        
-    }
-    
+        .frame(maxHeight: 90)
+       
+        .padding(.horizontal , 15)    }
+      
     
     
 }
-struct ShopCategdory : View{
+struct SubCategory : View{
     
     
     
@@ -204,54 +215,58 @@ struct ShopCategdory : View{
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color("LayoutGray"))
                     .cornerRadius(10)
-                    .frame(maxHeight: 90)
-                Text("More")
+                    .frame(maxHeight: 80)
+                Text("Convenience")
                     .font(.caption)
+                   // .fontWeight(.semibold)
                 
             }
             VStack{
-                Image("Grocery")
+                Image("Ride")
                     .resizable()
                     .scaledToFit()
                     .padding(.vertical,15)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color("LayoutGray"))
                     .cornerRadius(10)
-                    .frame(maxHeight: 90)
-                Text("More")
+                    .frame(maxHeight: 80)
+                Text("Ride")
                     .font(.caption)
                 
             }
             
             VStack{
-                Image("Grocery")
+                Image("Pharmecy")
                     .resizable()
                     .scaledToFit()
                     .padding(.vertical,15)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color("LayoutGray"))
                     .cornerRadius(10)
-                    .frame(maxHeight: 90)
-                Text("More")
+                    .frame(maxHeight: 80)
+                Text("Pharmecy")
                     .font(.caption)
                 
             }
             VStack{
-                Image("Grocery")
+                Image("SeeMore")
+                   
                     .resizable()
                     .scaledToFit()
-                    .padding(.vertical,15)
+                    .padding(.vertical,25)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color("LayoutGray"))
                     .cornerRadius(10)
-                    .frame(maxHeight: 90)
+                    .frame(maxHeight: 80)
                 
-                Text("More")
+                Text("See all")
                     .font(.caption)
                 
             }
             
         }
+            .padding(.vertical , 5)
+            .padding(.horizontal , 15)
         
         
         
