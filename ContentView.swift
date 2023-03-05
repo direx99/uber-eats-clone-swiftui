@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selectedTab = 0
-    
+    @StateObject var viewModel = HomeModelView()
+
     var body: some View {
         
         TabView(selection: $selectedTab) {
@@ -20,25 +21,12 @@ struct ContentView: View {
                     Text("Home")
                 }
                 .tag(0)
-            BottomNavBarView()
-                .tabItem {
-                    Image(systemName: "mail.and.text.magnifyingglass")
-                       
-                    Text("Browse")
-                }
-                .tag(1)
-            BottomNavBarView()
-                .tabItem {
-                    Image(systemName: "cart.fill")
-                       
-                    Text("Cart")
-                }
-                .tag(1)
-            BottomNavBarView()
+          
+            BrowseView(viewModel: viewModel)
                 .tabItem {
                     Image(systemName: "person")
                        
-                    Text("Account")
+                    Text("Home")
                 }
                 .tag(1)
            

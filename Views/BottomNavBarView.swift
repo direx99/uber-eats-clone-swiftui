@@ -8,13 +8,10 @@
 import SwiftUI
 
 struct BottomNavBarView: View {
+    let category : Category
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Name: \(category.title)")
+
     }
 }
 
-struct BottomNavBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        BottomNavBarView()
-    }
-}
