@@ -67,13 +67,21 @@ struct HomeView: View {
             .cornerRadius(50)
             .padding(.vertical , 10)
             .padding(.horizontal , 15)
+            ScrollView(showsIndicators: false){
             ShopCategory()
             SubCategory()
+            
             Rectangle()
                 .frame(height: 10)
                 .foregroundColor(Color("LayoutGray"))
 
+           
+                FoodPost()
+                FoodPost()
+                FoodPost()
+                FoodPost()
 
+            }
             Spacer()
         }
     }
@@ -277,3 +285,78 @@ struct SubCategory : View{
 }
 
 
+struct FoodPost : View{
+    
+    
+    
+    
+    var body: some View{
+        VStack{
+            HStack{
+                ZStack(alignment: .topLeading){
+                    Image("Biriyaniwala")
+                        .resizable()
+                        .scaledToFit()
+                    HStack(spacing: 0){
+                        Text("Promo")
+                            .font(.caption)
+                            .padding(.vertical ,3)
+                            .padding(.horizontal ,10)
+                            .foregroundColor(Color.white)
+                            .fontWeight(.semibold)
+                            .background(Color("BarGreen"))
+                        
+                        
+                        Text("frfd")
+                            .font(.caption)
+                            .padding(.vertical ,3)
+                            .foregroundColor(Color("BarGreen"))
+                            .background(Color("BarGreen"))
+                            .cornerRadius(30)
+                            .padding(-10)
+                        
+                    }
+                    .padding(.vertical,15)
+                }
+                
+            }
+            VStack{
+                HStack(){
+                    VStack(spacing: 3){
+                        Text("Biriyaniwala - Rajagiriya")
+                            .fontWeight(.semibold)
+                            .frame(maxWidth: .infinity,alignment: .leading)
+                        Text("LKR 194 Fee • 25-40 min ")
+                            .foregroundColor(Color("TextGray"))
+                            .frame(maxWidth: .infinity,alignment: .leading)
+                    }
+                    Spacer()
+                    Circle()
+                        .scaledToFit()
+                        .foregroundColor(Color("LayoutGray"))
+                        .frame(alignment: .trailing)
+                        .overlay(
+                            Text("4.0")
+                            
+                            
+                        )
+                   
+                        .padding(.top,5)
+
+                }
+               
+
+            }
+            .frame(maxHeight: 45)
+            .padding(.vertical,5)
+
+        }
+        .padding(.horizontal,15)
+        .padding(.vertical,10)
+
+        
+        
+
+    }
+    
+}
