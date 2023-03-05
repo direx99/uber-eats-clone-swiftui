@@ -19,7 +19,7 @@ class HomeModelView: ObservableObject {
     
     func fetchCoinData(){
         
-        let urlString = "http://localhost:8070/categories/"
+        let urlString = "https://uber-eats-backend.onrender.com/categories"
         
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in

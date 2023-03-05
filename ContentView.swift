@@ -20,7 +20,7 @@ struct ContentView: View {
                         
                     Text("Home")
                 }
-                .tag(0)
+                .tag(1)
           
             BrowseView(viewModel: viewModel)
                 .tabItem {
@@ -28,7 +28,7 @@ struct ContentView: View {
                        
                     Text("Home")
                 }
-                .tag(1)
+                .tag(0)
            
         }
         .accentColor(.black)

@@ -22,7 +22,8 @@ struct BrowseView: View {
                 VStack{
                     
                     ScrollView{
-                        VStack{
+                        LazyVGrid(columns: columns) {
+
                             ForEach(viewModel.categories){ category in
                                 BottomNavBarView(category : category)
                             }
