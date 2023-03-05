@@ -9,17 +9,19 @@ import SwiftUI
 
 struct HomeView: View {
     @State var searchText = ""
+    
     var body: some View {
         VStack{
             HStack{
                 VStack(alignment: .leading){
                     Text("Deliver now")
+                        .font(.system(size: 15).weight(.regular))
                     
                         .foregroundColor(Color("TextGray"))
                     HStack{
                         Text("81 , Wadduwa ")
-                            .font(.headline)
-                        
+                            .font(.system(size: 18).weight(.regular))
+
                         Image(systemName: "chevron.down")
                             .resizable()
                             .scaledToFit()
@@ -36,7 +38,7 @@ struct HomeView: View {
                     }
                 }
             }
-            .padding(.vertical , 10)
+        //    .padding(.vertical , 10)
             .padding(.horizontal , 20)
             
             
@@ -65,7 +67,7 @@ struct HomeView: View {
             .background(Color("SearchColor"))
             .frame(width: .infinity)
             .cornerRadius(50)
-            .padding(.vertical , 10)
+            .padding(.bottom , 15)
             .padding(.horizontal , 15)
             ScrollView(showsIndicators: false){
                 ShopCategory()
@@ -263,7 +265,6 @@ struct SubCategory : View{
             }
             VStack{
                 Image("SeeMore")
-                
                     .resizable()
                     .scaledToFit()
                     .padding(.vertical,25)

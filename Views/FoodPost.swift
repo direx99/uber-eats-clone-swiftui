@@ -19,6 +19,7 @@ struct FoodPost : View{
     @State var fee : Int
     @State var postImage : String
 
+    @State var favClicked : Bool = false
 
 
     
@@ -47,6 +48,29 @@ struct FoodPost : View{
                             .background(Color("BarGreen"))
                             .cornerRadius(30)
                             .padding(-10)
+                        Spacer()
+                        
+                        Button(action: {
+                            
+                          
+                                favClicked.toggle()
+                           
+                            
+                        }, label: {
+                            Image(
+                                systemName: favClicked ? "heart.fill" : "heart"
+                                
+                            )
+                           
+                                .resizable()
+                                .scaledToFit()
+                                .font(Font.title.weight(.heavy))
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.white)
+                                .padding(.horizontal)
+                        })
+                        
+                            
                         
                     }
                     .padding(.vertical,15)
@@ -55,11 +79,12 @@ struct FoodPost : View{
             }
             VStack{
                 HStack(){
-                    VStack(spacing: 3){
+                    VStack(spacing: 2){
                         Text("\(title) - \(location)")
-                            .fontWeight(.semibold)
+                            .font(.system(size: 16).weight(.medium))
                             .frame(maxWidth: .infinity,alignment: .leading)
                         Text("LKR \(fee) Fee • \(deliveryTime) min ")
+                            .font(.system(size: 14))
                             .foregroundColor(Color("TextGray"))
                             .frame(maxWidth: .infinity,alignment: .leading)
                     }
@@ -67,21 +92,22 @@ struct FoodPost : View{
                     Circle()
                         .scaledToFit()
                         .foregroundColor(Color("LayoutGray"))
-                        .frame(alignment: .trailing)
+                        .frame(maxHeight:35, alignment: .trailing)
                         .overlay(
                             Text("\(rating)")
-                            
+                                .font(.system(size: 13.5))
+
                             
                         )
-                   
-                        .padding(.top,5)
+                        .padding(.top,-10)
+                       
 
                 }
                
 
             }
             .frame(maxHeight: 45)
-            .padding(.vertical,5)
+            .padding(.vertical,0)
 
         }
         .padding(.horizontal,15)

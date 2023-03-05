@@ -22,23 +22,23 @@ struct ContentView: View {
                 .tag(0)
             BottomNavBarView()
                 .tabItem {
-                    Image(systemName: "magnifyingglass.circle")
+                    Image(systemName: "mail.and.text.magnifyingglass")
                        
-                    Text("Home")
+                    Text("Browse")
+                }
+                .tag(1)
+            BottomNavBarView()
+                .tabItem {
+                    Image(systemName: "cart.fill")
+                       
+                    Text("Cart")
                 }
                 .tag(1)
             BottomNavBarView()
                 .tabItem {
                     Image(systemName: "person")
                        
-                    Text("Home")
-                }
-                .tag(1)
-            BottomNavBarView()
-                .tabItem {
-                    Image(systemName: "person")
-                       
-                    Text("Home")
+                    Text("Account")
                 }
                 .tag(1)
            
