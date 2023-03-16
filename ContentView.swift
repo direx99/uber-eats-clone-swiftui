@@ -25,7 +25,7 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "person")
                        
-                    Text("Home")
+                    Text("Homhhjhe")
                 }
                 .tag(0)
            
