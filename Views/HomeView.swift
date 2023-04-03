@@ -15,12 +15,12 @@ struct HomeView: View {
             HStack{
                 VStack(alignment: .leading){
                     Text("Deliver now")
-                        .font(.system(size: 15).weight(.regular))
+                        .font(.system(size: 13).weight(.regular))
                     
                         .foregroundColor(Color("TextGray"))
                     HStack{
                         Text("81 , Wadduwa ")
-                            .font(.system(size: 18).weight(.regular))
+                            .font(.system(size: 15).weight(.regular))
 
                         Image(systemName: "chevron.down")
                             .resizable()
@@ -78,18 +78,52 @@ struct HomeView: View {
                     .foregroundColor(Color("LayoutGray"))
                 
                 
+                Group{
+                    FoodPost(title: "Biriyaniwala", location: "Rajagiriya", promotion: "Buy 1, Get 1 Free", rating:"4.6", deliveryTime: "20-40", fee: 199, postImage: "Biriyaniwala")
+                    
+                    FoodPost(title: "Biriyaniwala", location: "Rajagiriya", promotion: "Buy 1, Get 1 Free", rating:"4.6", deliveryTime: "20-40", fee: 199, postImage: "Biriyaniwala")
+                    
+                    FoodPost(title: "Biriyaniwala", location: "Rajagiriya", promotion: "Buy 1, Get 1 Free", rating:"4.6", deliveryTime: "20-40", fee: 199, postImage: "Biriyaniwala")
+                    FoodPost(title: "Biriyaniwala", location: "Rajagiriya", promotion: "Buy 1, Get 1 Free", rating:"4.6", deliveryTime: "20-40", fee: 199, postImage: "Biriyaniwala")
+                }
+
                 
-                FoodPost(title: "Biriyaniwala", location: "Rajagiriya", promotion: "Buy 1, Get 1 Free", rating:"4.6", deliveryTime: "20-40", fee: 199, postImage: "Biriyaniwala")
+                Rectangle()
+                    .frame(height: 10)
+                    .foregroundColor(Color("LayoutGray"))
+                ScrollView(.horizontal,showsIndicators: false){
+                    HStack(alignment:.center){
+                        Group{
+                            PromoView()
+                            PromoView()
+                            PromoView()
+                            PromoView()
+
+                        }
+                        .frame(width: UIScreen.main.bounds.width)
+                    }
+                    
+                   
+                        
+                    
+                }
                 
-                FoodPost(title: "Biriyaniwala", location: "Rajagiriya", promotion: "Buy 1, Get 1 Free", rating:"4.6", deliveryTime: "20-40", fee: 199, postImage: "Biriyaniwala")
+                Group{
+                    FoodPost(title: "Biriyaniwala", location: "Rajagiriya", promotion: "Buy 1, Get 1 Free", rating:"4.6", deliveryTime: "20-40", fee: 199, postImage: "Biriyaniwala")
+                    
+                    FoodPost(title: "Biriyaniwala", location: "Rajagiriya", promotion: "Buy 1, Get 1 Free", rating:"4.6", deliveryTime: "20-40", fee: 199, postImage: "Biriyaniwala")
+                    
+                    FoodPost(title: "Biriyaniwala", location: "Rajagiriya", promotion: "Buy 1, Get 1 Free", rating:"4.6", deliveryTime: "20-40", fee: 199, postImage: "Biriyaniwala")
+                    FoodPost(title: "Biriyaniwala", location: "Rajagiriya", promotion: "Buy 1, Get 1 Free", rating:"4.6", deliveryTime: "20-40", fee: 199, postImage: "Biriyaniwala")
+                }
+
                 
-                FoodPost(title: "Biriyaniwala", location: "Rajagiriya", promotion: "Buy 1, Get 1 Free", rating:"4.6", deliveryTime: "20-40", fee: 199, postImage: "Biriyaniwala")
-                FoodPost(title: "Biriyaniwala", location: "Rajagiriya", promotion: "Buy 1, Get 1 Free", rating:"4.6", deliveryTime: "20-40", fee: 199, postImage: "Biriyaniwala")
-                
-                
-                
+               
+             
             }
+            
             Spacer()
+            
         }
     }
 }

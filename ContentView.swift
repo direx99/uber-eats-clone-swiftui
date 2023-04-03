@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selectedTab = 0
+    @State private var selectedTab = 1
     @StateObject var viewModel = HomeModelView()
 
     var body: some View {
@@ -21,6 +21,20 @@ struct ContentView: View {
                 }
                 .tag(1)
           
+            BrowseView(viewModel: viewModel)
+                .tabItem {
+                    Image(systemName: "person")
+                       
+                    Text("Homhhjhe")
+                }
+                .tag(0)
+            BrowseView(viewModel: viewModel)
+                .tabItem {
+                    Image(systemName: "cart")
+                       
+                    Text("Homhhjhe")
+                }
+                .tag(0)
             BrowseView(viewModel: viewModel)
                 .tabItem {
                     Image(systemName: "person")
