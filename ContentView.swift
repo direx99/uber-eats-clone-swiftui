@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selectedTab = 1
+    @State private var selectedTab = 3
     @StateObject var viewModel = HomeModelView()
 
     var body: some View {
@@ -35,13 +35,13 @@ struct ContentView: View {
                     Text("Homhhjhe")
                 }
                 .tag(0)
-            BrowseView(viewModel: viewModel)
+            AccountView()
                 .tabItem {
                     Image(systemName: "person")
                        
                     Text("Homhhjhe")
                 }
-                .tag(0)
+                .tag(3)
            
         }
         .accentColor(.black)
